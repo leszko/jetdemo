@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: jetdemo
+spec:
+  template:
+    spec:
+      containers:
+      - name: jetdemo
+        image: leszko/jetdemo
+      restartPolicy: Never
+  backoffLimit: 4
